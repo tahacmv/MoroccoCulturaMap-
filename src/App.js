@@ -99,41 +99,41 @@ function Questionnaire() {
           </div>
 
           {/* Question 2 */}
-          <div className="form-group mb-4">
-            <label>Question 2: Quels sont vos légumes préférés ?</label>
-            <select
-              className="form-control"
-              value=""
-              onChange={(e) => {
-                const selectedVegetable = e.target.value;
-                handleInputChange('question2', [...answers.question2, selectedVegetable]);
-              }}
-            >
-              <option value="">Choisissez un légume</option>
-              <option value="carotte">Carotte</option>
-              <option value="brocoli">Brocoli</option>
-              <option value="tomate">Tomate</option>
-              <option value="navet">Navet</option>
-              <option value="onion">Onion</option>
-              <option value="pois chiche">Pois Chiche</option>
-              <option value="pomme de terre">Pomme De Terre</option>
-              {/* Ajoutez d'autres options de légumes ci-dessous */}
-            </select>
-            <div className="mt-2">
-              {answers.question2.map((vegetable, index) => (
-                <div key={index} className="d-inline-block mr-2">
-                  <span className="mr-2">{vegetable}</span>
-                  <button
-                    type="button"
-                    className="btn btn-sm btn-danger"
-                    onClick={() => handleRemove('question2', vegetable)}
-                  >
-                    Supprimer
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
+<div className="form-group mb-4">
+  <label>Question 2: Quels sont vos légumes préférés ?</label>
+  <select
+    className="form-control"
+    value=""
+    onChange={(e) => {
+      const selectedVegetable = e.target.value;
+      handleInputChange('question2', [...answers.question2, selectedVegetable]);
+    }}
+  >
+    <option value="">Choisissez un légume</option>
+    <option value="carotte">Carotte</option>
+    <option value="brocoli">Brocoli</option>
+    <option value="tomate">Tomate</option>
+    <option value="navet">Navet</option>
+    <option value="onion">Onion</option>
+    <option value="pois chiche">Pois Chiche</option>
+    <option value="pomme de terre">Pomme De Terre</option>
+    {/* Ajoutez d'autres options de légumes ci-dessous */}
+  </select>
+  <div className="mt-2">
+    {answers.question2.map((vegetable, index) => (
+      <div key={index} className="d-inline-block mr-2">
+        <span className="mr-2">{vegetable}</span>
+        <span
+          className="text-danger"
+          style={{ cursor: 'pointer' }}
+          onClick={() => handleRemove('question2', vegetable)}
+        >
+          &#10006;
+        </span>
+      </div>
+    ))}
+  </div>
+</div>
           {/* Autres questions suivantes */}
 
           {/* Question 3 */}
@@ -242,42 +242,43 @@ function Questionnaire() {
             </div>
           
 
-          {/* Question 5 */}
-          <div className="form-group mb-4">
-            <label>Question 5: Quelles sont vos épices préférées ?</label>
-            <select
-              className="form-control"
-              value=""
-              onChange={(e) => {
-                const selectedSpice = e.target.value;
-                handleInputChange('question5', [...answers.question5, selectedSpice]);
-              }}
-            >
-              <option value="">Choisissez une épice</option>
-              <option value="cumin">Cumin</option>
-              <option value="curcuma">Curcuma</option>
-              <option value="Gingembre Moulu">Gingembre Moulu</option>
-              <option value="Paprika">Paprika</option>
-              <option value="Poivre Moulu">Poivre Moulu</option>
-              <option value="Ras El Hanout">Ras El Hanout</option>
-              <option value="Sel">Sel</option>
-              {/* Ajoutez d'autres options d'épices ci-dessous */}
-            </select>
-            <div className="mt-2">
-              {answers.question5.map((spice, index) => (
-                <div key={index} className="d-inline-block mr-2">
-                  <span className="mr-2">{spice}</span>
-                  <button
-                    type="button"
-                    className="btn btn-sm btn-danger"
-                    onClick={() => handleRemove('question5', spice)}
-                  >
-                    Supprimer
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
+         {/* Question 5 */}
+<div className="form-group mb-4">
+  <label>Question 5: Quelles sont vos épices préférées ?</label>
+  <select
+    className="form-control"
+    value=""
+    onChange={(e) => {
+      const selectedSpice = e.target.value;
+      handleInputChange('question5', [...answers.question5, selectedSpice]);
+    }}
+  >
+    <option value="">Choisissez une épice</option>
+    <option value="cumin">Cumin</option>
+    <option value="curcuma">Curcuma</option>
+    <option value="Gingembre Moulu">Gingembre Moulu</option>
+    <option value="Paprika">Paprika</option>
+    <option value="Poivre Moulu">Poivre Moulu</option>
+    <option value="Ras El Hanout">Ras El Hanout</option>
+    <option value="Sel">Sel</option>
+    {/* Ajoutez d'autres options d'épices ci-dessous */}
+  </select>
+  <div className="mt-2">
+    {answers.question5.map((spice, index) => (
+      <div key={index} className="d-inline-block mr-2">
+        <span className="mr-2">{spice}</span>
+        <span
+          className="text-danger"
+          style={{ cursor: 'pointer' }}
+          onClick={() => handleRemove('question5', spice)}
+        >
+          &#10006;
+        </span>
+      </div>
+    ))}
+  </div>
+</div>
+
 
           {/* Question 6 */}
           <div className="form-group mb-4">
